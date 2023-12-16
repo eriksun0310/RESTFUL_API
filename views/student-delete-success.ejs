@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, tr, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>刪除學生資料成功！</h1>
+    <p>以下為刪除成功的學生資料：</p>
+    <table>
+        <tr>
+            <td>學生ID</td>
+            <td><%= foundDeleteStudent._id%></td>
+        </tr>
+        <tr>
+            <td>名稱</td>
+            <td><%= foundDeleteStudent.name%></td>
+        </tr>
+        <tr>
+            <td>年齡</td>
+            <td><%= foundDeleteStudent.age%></td>
+        </tr>
+    </table>
+    <a href="/students">Home</a>
+</body>
+</html>

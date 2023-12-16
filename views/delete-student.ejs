@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改學生資料</title>
+</head>
+<body>
+    <form method="POST" action="/students/<%= foundStudent._id%>?_method=DELETE">
+        <label for="name">姓名：</label>
+        <input type="text" name="name" value="<%= foundStudent.name%>"/>
+        <br>
+        <label for="age">年齡：</label>
+        <input type="number" name="age" value="<%= foundStudent.age%>" />
+        <br>
+        <label for="merit">merit獎學金：</label>
+        <input type="number" name="merit"  value="<%= foundStudent.scholarship.merit%>"/>
+        <br>
+        <label for="other">other獎學金：</label>
+        <input type="number" name="other" value="<%= foundStudent.scholarship.other%>"/>
+        <br>
+        <button>確定刪除學生資料</button>
+    </form>
+</body>
+</html>
